@@ -133,6 +133,10 @@ li .dropdown {
     width: 100%;
     padding: 15px;
 }
+.col-3-top{
+    width: 25%;
+    padding: 15px;
+}
 .top-story-container{
     display: flex;
     flex-wrap: wrap;
@@ -165,9 +169,10 @@ h4{
 }
 .fakeimg{
     background-color: #dcdcdc;
-    width: 150px;
-    height: 100px;
+    width: 100%;
+ 
     border: 1px solid #ececec;
+    max-width: 100%;
 }
 .go-top{
     position: sticky;
@@ -189,10 +194,10 @@ h4{
         display: flex;
     }
    .col-9{
-        width: 50%;    
+        width: 100%;    
    }
-   .col-3{
-        width: 50%;
+   .col-3-top{
+    display: none;
    }
    .container-row{
         flex-direction: column;
