@@ -12,6 +12,7 @@ body{
 }
 .navbar,.short-navbar{
     display: flex;
+    list-style-type: none;
     justify-content: end;
     align-items: center;
     margin-right:50px;
@@ -19,6 +20,9 @@ body{
     border-bottom: 1px solid white;
     padding: 12px 20px;
     margin-bottom: 25px;
+    position: sticky;
+    top:0;
+    background-color: black;
 }
 .short-navbar{
     display: none;
@@ -30,7 +34,7 @@ body{
 .navbar li a {
     text-decoration: none;
     color:white;
-    font-size: 24px;
+    font-size: 16px;
     padding: 12px;
 
 }
@@ -60,10 +64,11 @@ li .dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:black;
+    background-color:#a2a2a2;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    color:#292929
 }
 
 .dropdown-content a {
@@ -81,9 +86,7 @@ li .dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.short-navbar .dropdown:hover .dropdown-content {
-display: block;
-}
+
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -91,13 +94,18 @@ display: block;
     margin-left:3%;
     margin-right:3%;
 }
-.col-3{
-    width: 25%;
+.col-1{
+    width: 8.33%;
     padding: 15px;
 
 }
 .col-2{
     width: 16.66%;
+    padding: 15px;
+
+}
+.col-3{
+    width: 25%;
     padding: 15px;
 
 }
@@ -107,18 +115,23 @@ display: block;
 
 }
 .col-8{
-    width: 65%;
+    width: 66.66%;
     padding: 15px;
 
 }
 .col-9{
-    width: 70%;
+    width: 75%;
+    padding: 15px;
+
+}
+.col-10{
+    width: 83.33%;
     padding: 15px;
 
 }
 .col-12{
     width: 100%;
-    background-color: aliceblue;
+    padding: 15px;
 }
 .top-story-container{
     display: flex;
@@ -127,7 +140,46 @@ display: block;
     border-bottom:1px solid white;
     
 }
-
+.top-story-container:hover{
+    cursor: pointer;
+}
+.container-row{
+    display: flex;
+    flex-direction: row;
+    margin-top:25px;
+}
+.container{
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    margin-right: 20px;
+    padding:20px;
+    width: 33%;
+    max-width: 100%;
+}
+h4{
+    text-align: center;
+}
+.img-container{
+    justify-content: center;
+    align-items: center;
+}
+.fakeimg{
+    background-color: #dcdcdc;
+    width: 150px;
+    height: 100px;
+    border: 1px solid #ececec;
+}
+.go-top{
+    position: sticky;
+    bottom: 0;
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
 
 @media screen and (max-width: 600px) {
     .navbar{
@@ -136,4 +188,19 @@ display: block;
     .short-navbar{
         display: flex;
     }
+   .col-9{
+        width: 50%;    
+   }
+   .col-3{
+        width: 50%;
+   }
+   .container-row{
+        flex-direction: column;
+   }
+   .container{
+        margin-right: 0px;
+        margin-top: 25px;
+        width: 100%;
+   }
+ 
 }
